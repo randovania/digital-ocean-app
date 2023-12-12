@@ -1,0 +1,14 @@
+alerts:
+- rule: DEPLOYMENT_FAILED
+- rule: DOMAIN_FAILED
+functions:
+- github:
+    branch: main
+    deploy_on_push: true
+    repo: randovania/digital-ocean-app
+  name: discord-notifications
+  routes:
+  - path: /
+  source_dir: /webhook
+
+name: discord
