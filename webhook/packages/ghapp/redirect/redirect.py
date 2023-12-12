@@ -82,7 +82,8 @@ def main(args: dict[str, str]):
         channel_name = "randovania-dev"
     
     print(f"Event for repository {repository} and channel {channel_name}")
+    return {"body": f"Event for repository {repository} and channel {channel_name}"}
 
-    result = _send_to_discord(channel_name, args)
-    print(result)
-    return {"body": result}
+    # result = _send_to_discord(channel_name, args)
+    # print(result)
+    # return {"body": result}
