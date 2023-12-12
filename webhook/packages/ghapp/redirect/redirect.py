@@ -1,4 +1,6 @@
+import json
 import logging
+import os
 import requests
 
 def get_labels(issue):
@@ -34,18 +36,11 @@ ignored_users = {
     "pre-commit-ci[bot]",
 }
 
-def _send_to_discord(body):
-    url = f"https://discord.com/api/webhooks/{part1}/{part2}/github"
-    headers = {
-        k: request.headers[k]
-        for k in [
-            "X-GitHub-Delivery", "X-GitHub-Event", "X-GitHub-Hook-ID", "X-GitHub-Hook-Installation-Target-ID",
-            "X-GitHub-Hook-Installation-Target-Type",
-        ]
-    }
-    headers["content-type"] = "application/json"
+def _send_to_discord(channel: str, body: dict):
+    webhooks = json.loads(os.environ["DISCORD_WEBHOOKS"])
 
-    r = requests.post(url, data=body, headers=headers)
+    url = f"{webhooks[channel]}/github"
+    r = requests.post(url, json=body)
     r.raise_for_status()
     logging.info("response: %s", str(r))
     return r.text
@@ -81,7 +76,6 @@ def main(args: dict[str, str]):
     else:
         channel_name = "randovania-dev"
     
-    name = repository
-    greeting = f"Hello {name}! Redirecting to #{channel_name}."
-    print(greeting)
-    return {"body": greeting}
+    result = _send_to_discord(channel_name, args)
+    print(result)
+    return {"body": result}
