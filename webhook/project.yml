@@ -14,6 +14,14 @@ packages:
         web: true
         parameters: {}
         environment:
-          DISCORD_WEBHOOKS: "${DISCORD_WEBHOOKS}" 
+          WEBHOOK_AM2R_DEV: "${WEBHOOK_AM2R_DEV}"
+          WEBHOOK_CORRUPTION_DEV: "${WEBHOOK_CORRUPTION_DEV}"
+          WEBHOOK_DREAD_DEV: "${WEBHOOK_DREAD_DEV}"
+          WEBHOOK_ECHOES_DEV: "${WEBHOOK_ECHOES_DEV}"
+          WEBHOOK_SUPER_METROID_DEV: "${WEBHOOK_SUPER_METROID_DEV}"
+          WEBHOOK_PRIME_DEV: "${WEBHOOK_PRIME_DEV}"
+          WEBHOOK_RANDOVANIA_DEV: "${WEBHOOK_RANDOVANIA_DEV}"
+          WEBHOOK_SAMUS_RETURNS_DEV: "${WEBHOOK_SAMUS_RETURNS_DEV}"
+          WEBHOOK_CAVE_STORY_DEV: "${WEBHOOK_CAVE_STORY_DEV}"
         annotations: {}
         limits: {}

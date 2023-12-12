@@ -37,9 +37,9 @@ ignored_users = {
 }
 
 def _send_to_discord(channel: str, body: dict):
-    webhooks = json.loads(os.environ["DISCORD_WEBHOOKS"])
-
-    url = f"{webhooks[channel]}/github"
+    channel_enviroify = channel.upper().replace("-", "_")
+    webhook = os.environ[f"WEBHOOK_{channel_enviroify}"]
+    url = f"{webhook}/github"
     r = requests.post(url, json=body)
     r.raise_for_status()
     logging.info("response: %s", str(r))
