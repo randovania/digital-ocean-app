@@ -47,11 +47,15 @@ def _send_to_discord(channel: str, body: dict):
     
 
 def main(args: dict[str, str]):
+    print("Received new event")
+
     if "repository" not in args:
+        print("unsupported request")
         return {"body": "unsupported request"}
 
     if "sender" in args:
         if args["sender"].get("login") in ignored_users:
+            print("ignored user")
             return {"body": "ignored user"}
 
     repository = args["repository"]["name"]
@@ -60,6 +64,7 @@ def main(args: dict[str, str]):
     if issue:
         if "user" in issue:
             if issue["user"].get("login") in ignored_users:
+                print("ignored user")
                 return {"body": "ignored user"}
 
         labels = get_labels(issue)
@@ -76,6 +81,8 @@ def main(args: dict[str, str]):
     else:
         channel_name = "randovania-dev"
     
+    print(f"Event for repository {repository} and channel {channel_name}")
+
     result = _send_to_discord(channel_name, args)
     print(result)
     return {"body": result}
