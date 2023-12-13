@@ -47,7 +47,9 @@ def _send_to_discord(channel: str, body: dict):
     
 
 def main(args: dict[str, str]):
-    print("Received new event")
+    event = args["http"]["headers"]["x-github-event"]
+    
+    print(f"Received new event: {event}")
 
     if "repository" not in args:
         print("unsupported request")
