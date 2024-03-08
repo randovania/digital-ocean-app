@@ -3,20 +3,22 @@ alerts:
 - rule: DOMAIN_FAILED
 
 functions:
-- github:
+- name: discord-notifications
+  github:
     branch: main
     deploy_on_push: true
     repo: randovania/digital-ocean-app
 
-  log_destinations:
-  - name: logtail_log
-    logtail:
-      token: WMj2P5r9f27NVb7TKcFBdGHq
-  envs:
-  - key: LOG_DESTINATIONS
-    scope: RUN_AND_BUILD_TIME
-    value: ${_self.FUNCTIONS_LOG_DESTINATION_JSON}
-  name: discord-notifications
+  # log_destinations:
+  # - name: logtail_log
+  #   logtail:
+  #     token: WMj2P5r9f27NVb7TKcFBdGHq
+  
+  # envs:
+  # - key: LOG_DESTINATIONS
+  #   scope: RUN_AND_BUILD_TIME
+  #   value: ${_self.FUNCTIONS_LOG_DESTINATION_JSON}
+
   routes:
   - path: /
   source_dir: /webhook
