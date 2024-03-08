@@ -14,6 +14,7 @@ _channel_for_label = {
     "game: AM2R": "am2r-dev",
     "game: Cave Story": "cave-story-dev",
     "game: Metroid Dread": "dread-dev",
+    "game: Metroid Fusion": "fusion-dev",
     "game: Metroid Prime 1": "prime-dev",
     "game: Metroid Prime 2 Echoes": "echoes-dev",
     "game: Metroid Prime 3 Corruption": "corruption-dev",
