@@ -46,7 +46,7 @@ def _send_to_discord(channel: str, body: dict):
     print(">> WILL POST TO", url)
     logging.info("post to: %s", url)
 
-    r = requests.post(url, json=body)
+    r = requests.post(url, json=body, headers=body["http"]["headers"])
     r.raise_for_status()
     logging.info("response: %s", str(r))
     return f"Posted to webhook: {r.text}" 
