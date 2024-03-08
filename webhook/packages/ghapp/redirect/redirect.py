@@ -41,10 +41,16 @@ def _send_to_discord(channel: str, body: dict):
     channel_enviroify = channel.upper().replace("-", "_")
     webhook = os.environ[f"WEBHOOK_{channel_enviroify}"]
     url = f"{webhook}/github"
-    r = requests.post(url, json=body)
-    r.raise_for_status()
-    logging.info("response: %s", str(r))
-    return r.text
+
+    print(">> WILL POST TO", url)
+    logging.warning("post to: %s", url)
+
+    # r = requests.post(url, json=body)
+    # r.raise_for_status()
+    # logging.info("response: %s", str(r))
+    # return r.text
+
+    return url
     
 
 def main(args: dict[str, str]):
@@ -85,8 +91,8 @@ def main(args: dict[str, str]):
         channel_name = "randovania-dev"
     
     print(f"Event for repository {repository} and channel {channel_name}")
-    return {"body": f"Event for repository {repository} and channel {channel_name}"}
+    # return {"body": f"Event for repository {repository} and channel {channel_name}"}
 
-    # result = _send_to_discord(channel_name, args)
+    result = _send_to_discord(channel_name, args)
     # print(result)
-    # return {"body": result}
+    return {"body": result}
