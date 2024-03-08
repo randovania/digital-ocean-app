@@ -1,6 +1,7 @@
 import json
 import logging
 import os
+import traceback
 import requests
 
 def get_labels(issue):
@@ -53,9 +54,8 @@ def _send_to_discord(channel: str, body: dict):
     return url
     
 
-def main(args: dict[str, str]):
+def process(args: dict[str, str]) -> dict:
     event = args["http"]["headers"]["x-github-event"]
-    
     print(f"Received new event: {event}")
 
     if "repository" not in args:
@@ -96,3 +96,12 @@ def main(args: dict[str, str]):
     result = _send_to_discord(channel_name, args)
     # print(result)
     return {"body": result}
+
+
+def main(args: dict[str, str]):
+    try:
+        return process(args)
+    except Exception as e:
+        return {
+            "body": traceback.format_exception(e)
+        }
