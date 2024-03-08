@@ -44,14 +44,12 @@ def _send_to_discord(channel: str, body: dict):
     url = f"{webhook}/github"
 
     print(">> WILL POST TO", url)
-    logging.warning("post to: %s", url)
+    logging.info("post to: %s", url)
 
-    # r = requests.post(url, json=body)
-    # r.raise_for_status()
-    # logging.info("response: %s", str(r))
-    # return r.text
-
-    return url
+    r = requests.post(url, json=body)
+    r.raise_for_status()
+    logging.info("response: %s", str(r))
+    return r.text
     
 
 def process(args: dict[str, str]) -> dict:
