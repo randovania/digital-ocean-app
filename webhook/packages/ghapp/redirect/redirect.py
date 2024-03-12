@@ -25,6 +25,7 @@ _channel_for_label = {
 
 _channel_for_repository = {
     "YAMS": "am2r-dev",
+    "randomprime": "prime-dev",
     "py-randomprime": "prime-dev",
     "open-dread-rando": "dread-dev",
     "open-samus-returns-rando": "samus-returns-dev",
