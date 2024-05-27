@@ -15,6 +15,7 @@ _channel_for_label = {
     "game: AM2R": "am2r-dev",
     "game: Cave Story": "cave-story-dev",
     "game: Metroid Dread": "dread-dev",
+    "game: Factorio": "factorio-dev",
     "game: Metroid Fusion": "fusion-dev",
     "game: Metroid Prime 1": "prime-dev",
     "game: Metroid Prime 2 Echoes": "echoes-dev",
@@ -25,6 +26,7 @@ _channel_for_label = {
 
 _channel_for_repository = {
     "YAMS": "am2r-dev",
+    "factorio-randovania-mod": "factorio-dev",
     "randomprime": "prime-dev",
     "py-randomprime": "prime-dev",
     "open-dread-rando": "dread-dev",
