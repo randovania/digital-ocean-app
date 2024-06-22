@@ -14,12 +14,13 @@ def get_labels(issue):
 _channel_for_label = {
     "game: AM2R": "am2r-dev",
     "game: Cave Story": "cave-story-dev",
-    "game: Metroid Dread": "dread-dev",
+    "game: Metroid Dread": "metroid-dread-dev",
     "game: Factorio": "factorio-dev",
-    "game: Metroid Fusion": "fusion-dev",
-    "game: Metroid Prime 1": "prime-dev",
-    "game: Metroid Prime 2 Echoes": "echoes-dev",
-    "game: Metroid Prime 3 Corruption": "corruption-dev",
+    "game: Metroid Fusion": "metroid-fusion-dev",
+    "game: Metroid Planets": "metroid-planets-dev",
+    "game: Metroid Prime 1": "metroid-prime-dev",
+    "game: Metroid Prime 2 Echoes": "mp2-echoes-dev",
+    "game: Metroid Prime 3 Corruption": "mp3-corruption-dev",
     "game: Metroid: Samus Returns": "samus-returns-dev",
     "game: Super Metroid": "super-metroid-dev",
 }
@@ -27,11 +28,11 @@ _channel_for_label = {
 _channel_for_repository = {
     "YAMS": "am2r-dev",
     "factorio-randovania-mod": "factorio-dev",
-    "randomprime": "prime-dev",
-    "py-randomprime": "prime-dev",
-    "open-dread-rando": "dread-dev",
+    "randomprime": "metroid-prime-dev",
+    "py-randomprime": "metroid-prime-dev",
+    "open-dread-rando": "metroid-dread-dev",
     "open-samus-returns-rando": "samus-returns-dev",
-    "open-prime-rando": "echoes-dev",
+    "open-prime-rando": "mp2-echoes-dev",
     "Super-Duper-Metroid": "super-metroid-dev",
 }
 
