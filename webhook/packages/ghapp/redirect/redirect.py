@@ -27,6 +27,7 @@ _channel_for_label = {
 
 _channel_for_repository = {
     "YAMS": "am2r-dev",
+    "factorio-assets-mod": "factorio-dev",
     "factorio-randovania-mod": "factorio-dev",
     "randomprime": "prime-dev",
     "py-randomprime": "prime-dev",
