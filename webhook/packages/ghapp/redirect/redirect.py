@@ -31,6 +31,8 @@ _channel_for_repository = {
     "factorio-randovania-mod": "factorio-dev",
     "randomprime": "prime-dev",
     "py-randomprime": "prime-dev",
+    "mercury-engine-data-structures": "library-dev",
+    "msr-remote-connector": "samus-returns-dev", 
     "open-dread-rando": "dread-dev",
     "open-samus-returns-rando": "samus-returns-dev",
     "open-prime-rando": "echoes-dev",
