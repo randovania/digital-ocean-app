@@ -27,15 +27,21 @@ _channel_for_label = {
 
 _channel_for_repository = {
     "YAMS": "am2r-dev",
+    
     "factorio-assets-mod": "factorio-dev",
     "factorio-randovania-mod": "factorio-dev",
+    
+    "retro-data-structures": "library-dev",
     "randomprime": "prime-dev",
     "py-randomprime": "prime-dev",
-    "mercury-engine-data-structures": "library-dev",
-    "msr-remote-connector": "samus-returns-dev", 
-    "open-dread-rando": "dread-dev",
-    "open-samus-returns-rando": "samus-returns-dev",
     "open-prime-rando": "echoes-dev",
+    
+    "mercury-engine-data-structures": "library-dev",
+    "msr-remote-connector": "samus-returns-dev",
+    "open-samus-returns-rando": "samus-returns-dev",
+    "open-dread-rando": "dread-dev",
+    "exlaunch": "dread-dev",
+    
     "Super-Duper-Metroid": "super-metroid-dev",
 }
 
