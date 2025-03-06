@@ -40,7 +40,7 @@ _channel_for_repository = {
     "msr-remote-connector": "samus-returns-dev",
     "open-samus-returns-rando": "samus-returns-dev",
     "open-dread-rando": "dread-dev",
-    "exlaunch": "dread-dev",
+    "open-dread-rando-exlaunch": "dread-dev",
     
     "Super-Duper-Metroid": "super-metroid-dev",
 }
