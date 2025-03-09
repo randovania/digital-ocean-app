@@ -45,6 +45,10 @@ _channel_for_repository = {
     "Super-Duper-Metroid": "super-metroid-dev",
 }
 
+_ignored_repositories = {
+    "open-prime-hunters-rando"
+}
+
 ignored_users = {
     "codecov[bot]",
     "dependabot[bot]",
@@ -104,6 +108,8 @@ def process(args: dict[str, str]) -> dict:
         channel_name = channels[0]
     elif repository in _channel_for_repository:
         channel_name = _channel_for_repository[repository]
+    elif repository in _ignored_repositories:
+        return {"body": "ignored repository"}
     else:
         channel_name = "randovania-dev"
     
