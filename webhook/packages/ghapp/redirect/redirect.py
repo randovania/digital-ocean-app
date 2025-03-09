@@ -109,7 +109,7 @@ def process(args: dict[str, str]) -> dict:
     elif repository in _channel_for_repository:
         channel_name = _channel_for_repository[repository]
     elif repository in _ignored_repositories:
-        pass
+        return {"body": "ignored repository"}
     else:
         channel_name = "randovania-dev"
     
