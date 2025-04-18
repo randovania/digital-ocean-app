@@ -21,6 +21,7 @@ _channel_for_label = {
     "game: Metroid Prime 1": "prime-dev",
     "game: Metroid Prime 2 Echoes": "echoes-dev",
     "game: Metroid Prime 3 Corruption": "corruption-dev",
+    "game: Metroid Prime Hunters": "mp-hunters-dev",
     "game: Metroid: Samus Returns": "samus-returns-dev",
     "game: Super Metroid": "super-metroid-dev",
 }
@@ -35,6 +36,8 @@ _channel_for_repository = {
     "randomprime": "prime-dev",
     "py-randomprime": "prime-dev",
     "open-prime-rando": "echoes-dev",
+
+    "open-prime-hunters-rando": "mp-hunters-dev",
     
     "mercury-engine-data-structures": "library-dev",
     "msr-remote-connector": "samus-returns-dev",
@@ -45,9 +48,7 @@ _channel_for_repository = {
     "Super-Duper-Metroid": "super-metroid-dev",
 }
 
-_ignored_repositories = {
-    "open-prime-hunters-rando"
-}
+_ignored_repositories = {}
 
 ignored_users = {
     "codecov[bot]",
