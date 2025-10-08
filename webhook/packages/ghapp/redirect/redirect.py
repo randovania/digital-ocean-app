@@ -54,6 +54,7 @@ ignored_users = {
     "codecov[bot]",
     "dependabot[bot]",
     "pre-commit-ci[bot]",
+    "renovate[bot]",
 }
 
 def _send_to_discord(channel: str, body: dict):
