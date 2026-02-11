@@ -36,6 +36,7 @@ _channel_for_repository = {
     "randomprime": "prime-dev",
     "py-randomprime": "prime-dev",
     "open-prime-rando": "echoes-dev",
+    "open-prime-rando-practice-mod": "echoes-dev",
 
     "open-prime-hunters-rando": "mp-hunters-dev",
     
