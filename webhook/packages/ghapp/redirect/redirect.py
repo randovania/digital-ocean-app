@@ -32,6 +32,7 @@ _channel_for_repository = {
     "factorio-assets-mod": "factorio-dev",
     "factorio-randovania-mod": "factorio-dev",
     
+    "py-dolphin-memory-engine": "library-dev",
     "retro-data-structures": "library-dev",
     "randomprime": "prime-dev",
     "py-randomprime": "prime-dev",
