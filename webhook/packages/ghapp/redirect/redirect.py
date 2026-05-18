@@ -23,6 +23,7 @@ _channel_for_label = {
     "game: Metroid Prime 3 Corruption": "corruption-dev",
     "game: Metroid Prime Hunters": "mp-hunters-dev",
     "game: Metroid: Samus Returns": "samus-returns-dev",
+    "game: Metroid Zero Mission": "zero-mission-dev",
     "game: Super Metroid": "super-metroid-dev",
 }
 
